@@ -12,8 +12,8 @@
 */
 
 Route::get('/', [
-    'uses' => 'PostController@getIndex',
-    'as' => 'blog.index'
+    'uses' => 'HomeController@getHome',
+    'as' => 'site.index'
 ]);
 
 Route::get('post/{id}', [
@@ -49,5 +49,7 @@ Route::group(['prefix' => 'admin'], function() {
     Route::post('edit', [
         'uses' => 'PostController@postAdminUpdate',
         'as' => 'admin.update'
-    ]);
+    ]);    
 });
+
+Route::get('sendbasicemail','MailController@basic_email');
