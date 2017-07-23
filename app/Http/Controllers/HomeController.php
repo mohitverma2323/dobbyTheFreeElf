@@ -15,4 +15,13 @@ class HomeController extends Controller
         return view('site.index');
     }
 
+     public function getAbout(Store $session)
+    {
+        return view('site.about');
+    }
+    
+    public function getServices(Store $session)
+    {
+        return view('site.services');
+    }
 }
